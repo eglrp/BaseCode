@@ -1,0 +1,25 @@
+ply
+format   ascii   1.0   {   ascii/二进制，格式版本数   }
+comment   made   by   anonymous   {   注释关键词说明，像其他行一样   }
+comment   this   file   is   a   cube
+element   vertex   8   {   定义“vertex”（顶点）元素，在文件中有8个   }
+property   float32   x   {   顶点包含浮点坐标“x”}
+property   float32   y   {   y   坐标同样是一个顶点属性   }
+property   float32   z   {   z   也是坐标   }
+element   face   6   {   在文件里有6个“face”（面片）   }
+property   list   uint8   int32   vertex_index   {   “vertex_indices”（顶点素引）是一列整数   }
+end_header   {   划定头部结尾   }
+0   0   0   {   顶点列表的开始   }
+0   0   1
+0   1   1
+0   1   0
+1   0   0
+1   0   1
+1   1   1
+1   1   0
+4   0   1   2   3   {   面片列表开始   }
+4   7   6   5   4
+4   0   4   5   1
+4   1   5   6   2
+4   2   6   7   3
+4   3   7   4   0

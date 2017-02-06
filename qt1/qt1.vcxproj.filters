@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{52b5361e-fcdc-4fae-bbea-ba58af7f4875}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{019306dc-a58c-4aca-a81c-594ae6f090b5}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="tool">
+      <UniqueIdentifier>{fe37b1ee-6ca3-4e8d-b37b-2774dc9bdd36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="icp">
+      <UniqueIdentifier>{d11d17eb-c954-43e2-a035-595bd704ad78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="obb">
+      <UniqueIdentifier>{f563e03d-223c-475e-9622-8edfada40fd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Qt Widget">
+      <UniqueIdentifier>{72a6ef0b-5b67-45f5-9262-a7124712360c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{3d7ea6b3-dc06-4be9-ae93-c235baf227ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ICP\icp.cpp">
+      <Filter>icp</Filter>
+    </ClCompile>
+    <ClCompile Include="ICP\icpPointToPlane.cpp">
+      <Filter>icp</Filter>
+    </ClCompile>
+    <ClCompile Include="ICP\icpPointToPoint.cpp">
+      <Filter>icp</Filter>
+    </ClCompile>
+    <ClCompile Include="ICP\kdtree.cpp">
+      <Filter>icp</Filter>
+    </ClCompile>
+    <ClCompile Include="ICP\matrix.cpp">
+      <Filter>icp</Filter>
+    </ClCompile>
+    <ClCompile Include="OBB\OBB.cpp">
+      <Filter>obb</Filter>
+    </ClCompile>
+    <ClCompile Include="OBB\ObbMatrix.cpp">
+      <Filter>obb</Filter>
+    </ClCompile>
+    <ClCompile Include="tool\BaseModel.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="tool\Point3D.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="datamodel.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MoudelWidget.cpp">
+      <Filter>Qt Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="tool\fitting.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrame.cpp">
+      <Filter>Qt Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainFrame.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MainFrame.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_MainFrame.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tool\PointModel.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="tool\Quaternion.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="qt1.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MainFrame.h">
+      <Filter>Qt Widget</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MainFrame.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_qt1.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="datamodel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ICP\icp.h">
+      <Filter>icp</Filter>
+    </ClInclude>
+    <ClInclude Include="ICP\icpPointToPlane.h">
+      <Filter>icp</Filter>
+    </ClInclude>
+    <ClInclude Include="ICP\icpPointToPoint.h">
+      <Filter>icp</Filter>
+    </ClInclude>
+    <ClInclude Include="ICP\kdtree.h">
+      <Filter>icp</Filter>
+    </ClInclude>
+    <ClInclude Include="ICP\matrix.h">
+      <Filter>icp</Filter>
+    </ClInclude>
+    <ClInclude Include="OBB\OBB.h">
+      <Filter>obb</Filter>
+    </ClInclude>
+    <ClInclude Include="OBB\ObbMatrix.h">
+      <Filter>obb</Filter>
+    </ClInclude>
+    <ClInclude Include="tool\BaseModel.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="tool\Face.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="tool\Point3D.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="tool\stdafx.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="MoudelWidget.h">
+      <Filter>Qt Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="tool\fitting.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="tool\PointModel.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="tool\Quaternion.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\clear_color.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icp.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\lock_view.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\unlock_view.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\fitting.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

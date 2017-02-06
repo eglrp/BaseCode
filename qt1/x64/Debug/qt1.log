@@ -1,0 +1,55 @@
+﻿生成启动时间为 2016/10/12 20:50:24。
+     1>项目“E:\BaseCode\qt1\qt1.vcxproj”在节点 2 上(Build 个目标)。
+     1>CustomBuild:
+         Moc'ing MainFrame.h...
+         Uic'ing qt1.ui...
+         Rcc'ing MainFrame.qrc...
+       ClCompile:
+         D:\Programs\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I.\GeneratedFiles /I. /ID:\Programs\Qt\Qt5.6.0\5.6\msvc2013_64\include /I.\GeneratedFiles\Debug /ID:\Programs\Qt\Qt5.6.0\5.6\msvc2013_64\include\QtCore /ID:\Programs\Qt\Qt5.6.0\5.6\msvc2013_64\include\QtGui /ID:\Programs\Qt\Qt5.6.0\5.6\msvc2013_64\include\QtOpenGL /ID:\Programs\Qt\Qt5.6.0\5.6\msvc2013_64\include\QtWidgets /ID:\boost_1_61_0 /Zi /nologo /W1 /WX- /Od /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_OPENGL_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt datamodel.cpp GeneratedFiles\Debug\moc_MainFrame.cpp ICP\icp.cpp ICP\icpPointToPlane.cpp ICP\icpPointToPoint.cpp ICP\kdtree.cpp ICP\matrix.cpp main.cpp OBB\OBB.cpp OBB\ObbMatrix.cpp MainFrame.cpp MoudelWidget.cpp tool\BaseModel.cpp tool\fitting.cpp tool\Point3D.cpp tool\PointModel.cpp tool\Quaternion.cpp
+         datamodel.cpp
+         moc_MainFrame.cpp
+         icp.cpp
+         icpPointToPlane.cpp
+         icpPointToPoint.cpp
+         kdtree.cpp
+         matrix.cpp
+         main.cpp
+         OBB.cpp
+         ObbMatrix.cpp
+         MainFrame.cpp
+         MoudelWidget.cpp
+         BaseModel.cpp
+         fitting.cpp
+         Point3D.cpp
+         PointModel.cpp
+         Quaternion.cpp
+         正在生成代码...
+     1>e:\basecode\qt1\tool\fitting.cpp(244): warning C4715: “Fitting::getEllipse”: 不是所有的控件路径都返回值
+     1>e:\basecode\qt1\tool\fitting.cpp(321): warning C4715: “Fitting::getCone”: 不是所有的控件路径都返回值
+         D:\Programs\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I.\GeneratedFiles /I. /ID:\Programs\Qt\Qt5.6.0\5.6\msvc2013_64\include /I.\GeneratedFiles\Debug /ID:\Programs\Qt\Qt5.6.0\5.6\msvc2013_64\include\QtCore /ID:\Programs\Qt\Qt5.6.0\5.6\msvc2013_64\include\QtGui /ID:\Programs\Qt\Qt5.6.0\5.6\msvc2013_64\include\QtOpenGL /ID:\Programs\Qt\Qt5.6.0\5.6\msvc2013_64\include\QtWidgets /ID:\boost_1_61_0 /Zi /nologo /W1 /WX- /Od /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_OPENGL_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt GeneratedFiles\qrc_MainFrame.cpp
+         qrc_MainFrame.cpp
+       Link:
+         D:\Programs\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\BaseCode\x64\Debug\\BaseCode.exe" /NOLOGO /LIBPATH:D:\Programs\Qt\Qt5.6.0\5.6\msvc2013_64\lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5OpenGLd.lib opengl32.lib glu32.lib Qt5Widgetsd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\BaseCode\x64\Debug\BaseCode.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\BaseCode\x64\Debug\BaseCode.lib" /MACHINE:X64 x64\Debug\datamodel.obj
+         x64\Debug\moc_MainFrame.obj
+         x64\Debug\qrc_MainFrame.obj
+         x64\Debug\icp.obj
+         x64\Debug\icpPointToPlane.obj
+         x64\Debug\icpPointToPoint.obj
+         x64\Debug\kdtree.obj
+         x64\Debug\matrix.obj
+         x64\Debug\main.obj
+         x64\Debug\OBB.obj
+         x64\Debug\ObbMatrix.obj
+         x64\Debug\MainFrame.obj
+         x64\Debug\MoudelWidget.obj
+         x64\Debug\BaseModel.obj
+         x64\Debug\fitting.obj
+         x64\Debug\Point3D.obj
+         x64\Debug\PointModel.obj
+         x64\Debug\Quaternion.obj
+         qt1.vcxproj -> E:\BaseCode\x64\Debug\BaseCode.exe
+     1>已完成生成项目“E:\BaseCode\qt1\qt1.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:30.40

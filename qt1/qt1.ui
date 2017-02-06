@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>qt1Class</class>
+ <widget class="QMainWindow" name="qt1Class">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1004</width>
+    <height>636</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>qt1</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="MoudelWidget" name="widget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::WheelFocus</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1004</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionOpenT"/>
+    <addaction name="actionOpenModel"/>
+    <addaction name="actionClosePoints"/>
+    <addaction name="actionCloseModel"/>
+    <addaction name="actionCloseAll"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>模型</string>
+    </property>
+    <widget class="QMenu" name="menu_3">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="title">
+      <string>模式</string>
+     </property>
+     <addaction name="action_3"/>
+     <addaction name="action_2"/>
+     <addaction name="action_4"/>
+    </widget>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>光照渲染
+</string>
+     </property>
+     <addaction name="action_6"/>
+     <addaction name="action_7"/>
+    </widget>
+    <addaction name="menu_3"/>
+    <addaction name="menu_4"/>
+    <addaction name="actionIsWireframe"/>
+   </widget>
+   <widget class="QMenu" name="menuFunction">
+    <property name="title">
+     <string>点云</string>
+    </property>
+    <widget class="QMenu" name="menu_6">
+     <property name="title">
+      <string>拟合图形</string>
+     </property>
+     <addaction name="actionPlane"/>
+     <addaction name="actionLine"/>
+     <addaction name="actionCircular"/>
+     <addaction name="actionEllipse"/>
+     <addaction name="actionSphere"/>
+     <addaction name="actionCylinder"/>
+     <addaction name="actionCone"/>
+    </widget>
+    <addaction name="actionRunICP"/>
+    <addaction name="actionDenoising"/>
+    <addaction name="separator"/>
+    <addaction name="actionPointCloudFitting"/>
+    <addaction name="menu_6"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>视图</string>
+    </property>
+    <addaction name="actionLockView"/>
+    <addaction name="actionClearSelected"/>
+   </widget>
+   <widget class="QMenu" name="menuZ">
+    <property name="title">
+     <string>生成</string>
+    </property>
+    <addaction name="actionCreateCylinderPoints"/>
+    <addaction name="actionCreateEllipsePoints"/>
+    <addaction name="actionCreateConePoints"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menuFunction"/>
+   <addaction name="menu_5"/>
+   <addaction name="menuZ"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolView">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionLockView"/>
+   <addaction name="separator"/>
+   <addaction name="actionClearSelected"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBarFitting">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionPointCloudFitting"/>
+   <addaction name="separator"/>
+   <addaction name="actionLine"/>
+   <addaction name="actionPlane"/>
+   <addaction name="actionCircular"/>
+   <addaction name="actionEllipse"/>
+   <addaction name="actionSphere"/>
+   <addaction name="actionCylinder"/>
+   <addaction name="actionCone"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarFile">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpenT"/>
+   <addaction name="actionOpenModel"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarICP">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionRunICP"/>
+   <addaction name="actionDenoising"/>
+  </widget>
+  <action name="action_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>点云</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>实体</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>随机
+</string>
+   </property>
+  </action>
+  <action name="actionOpenT">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/resources/points.png</normaloff>:/MainFrame/resources/points.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开点云</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>开启
+</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>关闭
+</string>
+   </property>
+  </action>
+  <action name="actionRunICP">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/resources/icp.png</normaloff>:/MainFrame/resources/icp.png</iconset>
+   </property>
+   <property name="text">
+    <string>配准</string>
+   </property>
+  </action>
+  <action name="actionDenoising">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/resources/denoising.png</normaloff>:/MainFrame/resources/denoising.png</iconset>
+   </property>
+   <property name="text">
+    <string>去噪</string>
+   </property>
+  </action>
+  <action name="actionIsWireframe">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/resources/grid.png</normaloff>:/MainFrame/resources/grid.png</iconset>
+   </property>
+   <property name="text">
+    <string>显示网格</string>
+   </property>
+  </action>
+  <action name="actionLockView">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/resources/unlock_view.png</normaloff>:/MainFrame/resources/unlock_view.png</iconset>
+   </property>
+   <property name="text">
+    <string>锁定视图</string>
+   </property>
+   <property name="iconText">
+    <string>锁定视图</string>
+   </property>
+  </action>
+  <action name="actionPointCloudFitting">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/resources/fitting.png</normaloff>:/MainFrame/resources/fitting.png</iconset>
+   </property>
+   <property name="text">
+    <string>点云拟合</string>
+   </property>
+  </action>
+  <action name="actionClearSelected">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/resources/clear_color.png</normaloff>:/MainFrame/resources/clear_color.png</iconset>
+   </property>
+   <property name="text">
+    <string>清除选取</string>
+   </property>
+  </action>
+  <action name="actionPlane">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/resources/plane.png</normaloff>:/MainFrame/resources/plane.png</iconset>
+   </property>
+   <property name="text">
+    <string>平面</string>
+   </property>
+  </action>
+  <action name="actionLine">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/resources/line.png</normaloff>:/MainFrame/resources/line.png</iconset>
+   </property>
+   <property name="text">
+    <string>直线</string>
+   </property>
+  </action>
+  <action name="actionCircular">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/resources/circle.png</normaloff>:/MainFrame/resources/circle.png</iconset>
+   </property>
+   <property name="text">
+    <string>圆</string>
+   </property>
+  </action>
+  <action name="actionOpenModel">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/resources/modell.png</normaloff>:/MainFrame/resources/modell.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开模型</string>
+   </property>
+  </action>
+  <action name="actionClosePoints">
+   <property name="text">
+    <string>关闭点云</string>
+   </property>
+  </action>
+  <action name="actionCloseModel">
+   <property name="text">
+    <string>关闭模型</string>
+   </property>
+  </action>
+  <action name="actionEllipse">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/resources/ellipse.png</normaloff>:/MainFrame/resources/ellipse.png</iconset>
+   </property>
+   <property name="text">
+    <string>椭圆</string>
+   </property>
+  </action>
+  <action name="actionSphere">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/resources/sphere.png</normaloff>:/MainFrame/resources/sphere.png</iconset>
+   </property>
+   <property name="text">
+    <string>球体</string>
+   </property>
+  </action>
+  <action name="actionCylinder">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/resources/cylinder.png</normaloff>:/MainFrame/resources/cylinder.png</iconset>
+   </property>
+   <property name="text">
+    <string>圆柱体</string>
+   </property>
+  </action>
+  <action name="actionCone">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/resources/cone.png</normaloff>:/MainFrame/resources/cone.png</iconset>
+   </property>
+   <property name="text">
+    <string>圆锥</string>
+   </property>
+  </action>
+  <action name="actionCreateCylinderPoints">
+   <property name="text">
+    <string>圆柱点云</string>
+   </property>
+  </action>
+  <action name="actionCloseAll">
+   <property name="text">
+    <string>关闭全部</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="actionCreateEllipsePoints">
+   <property name="text">
+    <string>椭圆点云</string>
+   </property>
+  </action>
+  <action name="actionCreateConePoints">
+   <property name="text">
+    <string>圆锥点云</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MoudelWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">MoudelWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="MainFrame.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionRunICP</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onRunICP()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionDenoising</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onDenoising()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionIsWireframe</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onIsWireframe()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLockView</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onLockView()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionPointCloudFitting</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onPointCloudFitting()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClearSelected</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onClearSelected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionPlane</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onShapePlane()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLine</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onShapeLine()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOpenModel</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onOpenFileM()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOpenT</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onOpenFileT()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCloseModel</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onCloseModel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClosePoints</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onClosePoints()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCircular</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onShapeCircular()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSphere</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onShapeSphere()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCone</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onShapeCone()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionEllipse</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onShapeEllipse()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCylinder</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onShapeCylinder()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCreateCylinderPoints</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onCreateCylinderPoints()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCloseAll</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onCloseAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onExit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCreateEllipsePoints</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onCreateEllipsePoints()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCreateConePoints</sender>
+   <signal>triggered()</signal>
+   <receiver>qt1Class</receiver>
+   <slot>onCreateConePoints()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onRunICP()</slot>
+  <slot>onDenoising()</slot>
+  <slot>onIsWireframe()</slot>
+  <slot>onLockView()</slot>
+  <slot>onPointCloudFitting()</slot>
+  <slot>onClearSelected()</slot>
+  <slot>onShapePlane()</slot>
+  <slot>onShapeLine()</slot>
+  <slot>onOpenFileT()</slot>
+  <slot>onOpenFileM()</slot>
+  <slot>onClosePoints()</slot>
+  <slot>onCloseModel()</slot>
+  <slot>onShapeCircular()</slot>
+  <slot>onShapeSphere()</slot>
+  <slot>onShapeCylinder()</slot>
+  <slot>onShapeCone()</slot>
+  <slot>onShapeEllipse()</slot>
+  <slot>onCreateCylinderPoints()</slot>
+  <slot>onCloseAll()</slot>
+  <slot>onExit()</slot>
+  <slot>onCreateEllipsePoints()</slot>
+  <slot>onCreateConePoints()</slot>
+ </slots>
+</ui>

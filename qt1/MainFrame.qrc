@@ -1,0 +1,20 @@
+<RCC>
+  <qresource prefix="MainFrame">
+    <file>resources/modell.png</file>
+    <file>resources/points.png</file>
+    <file>resources/grid.png</file>
+    <file>resources/denoising.png</file>
+    <file>resources/circle.png</file>
+    <file>resources/cone.png</file>
+    <file>resources/cylinder.png</file>
+    <file>resources/ellipse.png</file>
+    <file>resources/line.png</file>
+    <file>resources/plane.png</file>
+    <file>resources/sphere.png</file>
+    <file>resources/fitting.png</file>
+    <file>resources/clear_color.png</file>
+    <file>resources/icp.png</file>
+    <file>resources/lock_view.png</file>
+    <file>resources/unlock_view.png</file>
+  </qresource>
+</RCC>
